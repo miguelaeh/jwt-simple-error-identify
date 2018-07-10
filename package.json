@@ -1,0 +1,33 @@
+{
+  "name": "jwt-simple-error-identify",
+  "version": "1.0.0",
+  "description": "Easy use of jwt, based on the jwt-simple module, but you can identify the type of error ocurred, if is the case.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miguelaeh/jwt-simple-error-identify.git"
+  },
+  "keywords": [
+    "jwt",
+    "error",
+    "encode",
+    "decode",
+    "identify"
+  ],
+  "author": "Miguel Ángel Cabrera Miñagorri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/miguelaeh/jwt-simple-error-identify/issues"
+  },
+  "homepage": "https://github.com/miguelaeh/jwt-simple-error-identify#readme",
+  "dependencies": {
+    "extend-error": "0.0.2"
+  },
+  "devDependencies": {
+    "expect": "^23.3.0",
+    "moment": "^2.22.2"
+  }
+}
