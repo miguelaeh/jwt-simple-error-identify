@@ -1,6 +1,6 @@
 {
   "name": "jwt-simple-error-identify",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Easy use of jwt, based on the jwt-simple module, but you can identify the type of error ocurred, if is the case.",
   "main": "index.js",
   "scripts": {
@@ -24,10 +24,10 @@
   },
   "homepage": "https://github.com/miguelaeh/jwt-simple-error-identify#readme",
   "dependencies": {
+    "extend-error": "0.0.2"
   },
   "devDependencies": {
     "expect": "^23.3.0",
-    "moment": "^2.22.2",
-    "extend-error": "0.0.2"
+    "moment": "^2.22.2"
   }
 }
