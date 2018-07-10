@@ -27,4 +27,4 @@ try{
 		//do something, for example you can try with other algorithm.
 		console.log('Invalid Algorithm');
 	}
-}
+}	
