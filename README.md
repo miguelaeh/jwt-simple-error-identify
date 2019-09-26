@@ -4,20 +4,22 @@ Important, this module gives you the same functionality that the jwt-simple modu
 
 
 ## Install
-npm install --save jwt-simple-error-identify
+```bash
+$ npm install --save jwt-simple-error-identify
+```
 
 ## Usage
 
 ```javascript
-var jwt = require('jwt-simple-error-identify').jwt;
-var ExpiredToken = require('jwt-simple-error-identify').ExpiredToken; //the error
-var InvalidAlgorithm = require('jwt-simple-error-identify').InvalidAlgorithm; //the error
+const jwt = require('jwt-simple-error-identify').jwt;
+const ExpiredToken = require('jwt-simple-error-identify').ExpiredToken; //the error
+const InvalidAlgorithm = require('jwt-simple-error-identify').InvalidAlgorithm; //the error
 
 //Or you can do that
 /*
-*	var JWT = require(jwt-require-error-identify);
-*	var jwt = JWT.jwt;
-*	var ExpiredToken = JWT.ExpiredToken
+*	const JWT = require(jwt-require-error-identify);
+*	const jwt = JWT.jwt;
+*	const ExpiredToken = JWT.ExpiredToken
 *	//and so on with all type of errors.
 *
 */
@@ -29,14 +31,14 @@ var payload = {
 						// I use moment for the example you can use whatever you want.
 					   //Using moment().unix(), the token is expired after creation so we will catch the ExpiredToken error.
 }
-var secret = 'xxx';
+const secret = 'xxx';
 
 //encode
-var token = jwt.encode(payload, secret);
+const token = jwt.encode(payload, secret);
 
 // decode
 try{
-	var decoded = jwt.decode(token, secret);
+	const decoded = jwt.decode(token, secret);
 	console.log(decoded); //=> { foo: 'bar' }
 	//In this case that won't shown because the decode will throw an ExpiredToken error.
 }catch(err){
@@ -52,16 +54,16 @@ try{
 ```
 
 ## Error types
-	
+
 `InvalidToken`, `InvalidAlgorithm`, `ExpiredToken`, `SignatureError`.
 
 The most general errors are `InvalidToken` and `InvalidAlgorithm`.
 Exist also `ExpiredToken` and `SignatureError`, that inherit from `InvalidToken`.
-   
+
 Note that if you use `ExpiredToken` or `SignatureError` in the catch,
-you also need to check the `InvalidToken` because it could be thrown 
+you also need to check the `InvalidToken` because it could be thrown
 in cases that `ExpiredToken` and `SignatureError` not.
-    
+
 
 ## encode params
 ```javascript
